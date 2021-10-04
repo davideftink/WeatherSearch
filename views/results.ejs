@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Data</title>
+	<link rel="stylesheet" href="/app.css">
+</head>
+
+<body>
+    <h1>Weather Data</h1>
+	<div>
+		<h2>Location</h2>
+		<table>
+			<tr>
+				<td>City Name:</td>
+				<td><%= data.name %></td>
+			</tr>
+			<tr>
+				<td>City ID:</td>
+				<td><%= data.id %></td>
+			</tr>
+			<tr>
+				<td>Country:</td>
+				<td><%= data.sys.country %></td>
+			</tr>
+			<tr>
+				<td>Lat / Lon:</td>
+				<td><%= data.coord.lat %> / <%= data.coord.lon %></td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<div>
+		<h2>Current Weather</h2>
+		<table>
+			<tr>
+				<td>Description:</td>
+				<td><%= data.weather[0].main %> - <%= data.weather[0].description %></td>
+			</tr>
+			<tr>
+				<td>Temperature:</td>
+				<td><%= data.main.temp %>°F</td>
+			</tr>
+			<tr>
+				<td>Feels Like:</td>
+				<td><%= data.main.feels_like %>°F</td>
+			</tr>
+			<tr>
+				<td>Min / Max:</td>
+				<td><%= data.main.temp_min %>°F / <%= data.main.temp_max %>°F</td>
+			</tr>
+			<tr>
+				<td>Humdity:</td>
+				<td><%= data.main.humidity %>%</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<a href="/">Search Again</>
+</body>
+
+</html>

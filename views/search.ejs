@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Search</title>
+	<link rel="stylesheet" href="/app.css">
+</head>
+
+<body>
+    <h1>Weather Search App</h1>
+	<div>
+		<form id="search-form" action="/resultsbycity" method="GET">
+			<label for="city">City Name:</label>
+			<input type="text" name="city" id="city" placeholder="city" value="St. Louis" required><br>
+			<label for="state">State:</label>
+			<input type="text" name="state" id="state" placeholder="state" value="MO"><br>
+			<label for="country">Country:</label>
+			<input type="text" name="country" id="country" placeholder="country" value="US"><br>
+			<br>
+			<input type="submit" value="Search By City">
+		</form>
+		<br>
+	</div>
+	<br>
+	<div>
+		<form id="search-form" action="/resultsbyzip" method="GET">
+			<label for="zipcode">Zip Code:</label>
+			<input type="text" name="zipcode" id="zipcode" placeholder="zipcode" value="10001" required><br>
+			<br>
+			<input type="submit" value="Search By Zip Code">
+		</form>
+		<br>
+	</div>
+	<br>
+	<div>
+		<form id="search-form" action="/resultsbycoord" method="GET">
+			<label for="lat">Latitude (-90 to 90):</label>
+			<input type="number" name="lat" id="lat" placeholder="lat" value="0" min="-90" max="90" required><br>
+			<label for="lon">Longitude (-180 to 180):</label>
+			<input type="number" name="lon" id="lon" placeholder="lon" value="0" min="-180" max="180" required><br>
+			<br>
+			<input type="submit" value="Search By Coordinates">
+		</form>
+		<br>
+	</div>
+</body>
+
+</html>
